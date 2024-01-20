@@ -1,19 +1,17 @@
-import * as React from 'react';
 import { Outlet } from 'react-router-dom';
 
 import { Grid, GridItem } from '@chakra-ui/react';
 
 import NavBar from './NavBar';
-import HomePaymentOverview from './HomePaymentOverview';
 
-const RootLayout: React.FC = () => {
+const RootLayout:any = ({page}:{page:any}) => {
     return (
         <Grid
             templateRows="auto 1fr"
             templateColumns="1fr"
             templateAreas={`'nav'
                             'main'`}
-            height="100vh" 
+            height="100vh"
         >
             <GridItem area={'nav'}>
                 <NavBar />
@@ -25,7 +23,7 @@ const RootLayout: React.FC = () => {
                 <Outlet />
             </GridItem>
             <GridItem area={'main'}>
-                <HomePaymentOverview />
+                {page({props:"asdasd"}) }
             </GridItem>
         </Grid>
     )
