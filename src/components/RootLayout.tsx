@@ -4,24 +4,28 @@ import { Outlet } from 'react-router-dom';
 import { Grid, GridItem } from '@chakra-ui/react';
 
 import NavBar from './NavBar';
-import SideBar from './SideBar';
+import HomePaymentOverview from './HomePaymentOverview';
 
 const RootLayout: React.FC = () => {
     return (
         <Grid
-            templateAreas={`'nav nav'
-                            'side main'`}
-            gridTemplateRows={'100px'}
-            gridTemplateColumns={'1fr 5fr'}
+            templateRows="auto 1fr"
+            templateColumns="1fr"
+            templateAreas={`'nav'
+                            'main'`}
+            height="100vh" 
         >
             <GridItem area={'nav'}>
                 <NavBar />
             </GridItem>
-            <GridItem area={'side'}>
+            {/* <GridItem area={'side'}>
                 <SideBar />
-            </GridItem>
+            </GridItem> */}
             <GridItem area={'main'}>
                 <Outlet />
+            </GridItem>
+            <GridItem area={'main'}>
+                <HomePaymentOverview />
             </GridItem>
         </Grid>
     )
