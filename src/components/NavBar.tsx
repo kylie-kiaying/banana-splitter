@@ -1,5 +1,5 @@
+import { Box, Flex, Image, Link, Text } from '@chakra-ui/react';
 import React from 'react';
-import { Flex, Box, Text, Link, Image } from '@chakra-ui/react';
 import { Link as ReactRouterLink } from 'react-router-dom';
 
 const NavBar: React.FC = () => {
@@ -34,10 +34,10 @@ const NavBar: React.FC = () => {
         <Link as={ReactRouterLink} to="/" padding="1rem" color="white" _hover={{ textDecoration: 'none' }}>
           Overview
         </Link>
-        <Link as={ReactRouterLink} to="/friends" padding="1rem" color="white" _hover={{ textDecoration: 'none' }}>
+        <Link as={ReactRouterLink} to="/trips" padding="1rem" color="white" _hover={{ textDecoration: 'none' }}>
           Trips
         </Link>
-        <Link as={ReactRouterLink} to="/trips" padding="1rem" color="white" _hover={{ textDecoration: 'none' }}>
+        <Link as={ReactRouterLink} to="/friends" padding="1rem" color="white" _hover={{ textDecoration: 'none' }}>
           Friends
         </Link>
         <Link as={ReactRouterLink} to="/profile" padding="1rem" color="white" _hover={{ textDecoration: 'none' }}>
